@@ -11,7 +11,7 @@
 # 解释：
 # 书店老板在最后 3 分钟保持冷静。
 # 感到满意的最大客户数量 = 1 + 1 + 1 + 1 + 7 + 5 = 16.
-
+from typing import List
 class Solution:
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         n = len(customers)
@@ -23,13 +23,13 @@ class Solution:
         return total + maxIncrease
 
 
-上述过程可以看成维护一个长度为 X 的滑动窗口。当滑动窗口从下标范围 [i-X,i-1] 移动到下标范围 [i−X+1,i] 时，下标 i−X 从窗口中移出，下标 i 进入到窗口内。
-
-利用上述关系，可以在 O(1) 的时间内通过 increase i−1 得到 increase i.
-
-由于长度为 X 的子数组的最小结束下标是 X−1，因此第一个长度为 X 的子数组对应的 increase 的值为 increase X−1
-​，需要通过遍历数组 customers 和 grumpy 的前 X 个元素计算得到。从 increase X 到 increase n−1 的值则可利用上述关系快速计算得到。只需要遍历数组 customers 和 grumpy 各一次即可得到 X≤i<n 的每个 increase i 的值，时间复杂度是 O(n)。
-
-又由于计算初始的 total 的值需要遍历数组 customers 和 grumpy 各一次，因此整个过程只需要遍历数组 customers 和 grumpy 各两次，时间复杂度是 O(n)。
-
-在上述过程中维护增加的满意顾客的最大数量，记为 maxIncrease，则满意顾客的最大总数是 total+maxIncrease。
+# 上述过程可以看成维护一个长度为 X 的滑动窗口。当滑动窗口从下标范围 [i-X,i-1] 移动到下标范围 [i−X+1,i] 时，下标 i−X 从窗口中移出，下标 i 进入到窗口内。
+#
+# 利用上述关系，可以在 O(1) 的时间内通过 increase i−1 得到 increase i.
+#
+# 由于长度为 X 的子数组的最小结束下标是 X−1，因此第一个长度为 X 的子数组对应的 increase 的值为 increase X−1
+# ​，需要通过遍历数组 customers 和 grumpy 的前 X 个元素计算得到。从 increase X 到 increase n−1 的值则可利用上述关系快速计算得到。只需要遍历数组 customers 和 grumpy 各一次即可得到 X≤i<n 的每个 increase i 的值，时间复杂度是 O(n)。
+#
+# 又由于计算初始的 total 的值需要遍历数组 customers 和 grumpy 各一次，因此整个过程只需要遍历数组 customers 和 grumpy 各两次，时间复杂度是 O(n)。
+#
+# 在上述过程中维护增加的满意顾客的最大数量，记为 maxIncrease，则满意顾客的最大总数是 total+maxIncrease。
