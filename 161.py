@@ -33,6 +33,7 @@
 # Output: 14
 
 # 方法一：广度优先搜索
+from typing import List
 
 class Solution:
     NEIGHBORS = [[1, 3], [0, 2, 4], [1, 5], [0, 4], [1, 3, 5], [2, 4]]
