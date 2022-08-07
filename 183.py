@@ -18,6 +18,8 @@
 # 先假设原题从同一个方向标记数字，找出在此情况下路径的值
 # 在从label开始，隔一行将需要翻转的数字翻转，最后输出所需答案
 
+from typing import List
+
 class Solution:
     def pathInZigZagTree(self, label: int) -> List[int]:
         temp= label
