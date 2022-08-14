@@ -1,6 +1,6 @@
 package pid3;
 
-public class main {
+public class Main {
 	public static void main(String[] args) {
 		test("aab");
 		test("cdd");
