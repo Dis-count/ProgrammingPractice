@@ -25,6 +25,8 @@
 # Output: 1
 
 #  排序+ 滑动窗口
+from typing import List
+
 class Solution:
     def maxFrequency(self, nums: List[int], k: int) -> int:
         nums.sort()
