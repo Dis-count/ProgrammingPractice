@@ -5,5 +5,5 @@
 from matplotlib import pyplot as plt
 
 
-num[i] \geq num[i+1] and num[i-1] \geq num[i+1]
+# num[i] \geq num[i+1] and num[i-1] \geq num[i+1]
 # 超过一个起伏  即可判断 不满足
