@@ -35,7 +35,7 @@ class Solution:
                 ans += 1
         return ans + cnt
 
-
+# cnt is the number of left
 # 时间复杂度：O(n)，其中 n 是字符串的长度。遍历字符串一次。
 
 # 空间复杂度：O(1)。只需要维护常量的额外空间。
