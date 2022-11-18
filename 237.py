@@ -41,3 +41,16 @@ class Solution:
 
 # 时间复杂度：O(n)，其中 n 为题目给定表的行数。
 # 空间复杂度：O(n)，其中 n 为题目给定表的行数，主要为递归的空间开销。
+
+#  寻找翻转次数 = (k-1) 二进制个数
+# 如果“翻转”为偶数次则原问题求解为 0，否则为 1。
+
+class Solution:
+    def kthGrammar(self, n: int, k: int) -> int:
+        # return (k - 1).bit_count() & 1
+        k -= 1
+        res = 0
+        while k:
+            k &= k - 1
+            res ^= 1
+        return res
