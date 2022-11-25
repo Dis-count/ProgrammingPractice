@@ -38,6 +38,7 @@ class Solution:
 
 test = Solution()
 n = 20
+
 a = 3
 b = 4
 test.nthMagicalNumber(n, a, b)
