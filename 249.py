@@ -21,6 +21,7 @@
 
 # Input: nums = [1,2,3,4,5,6,7], k = 4
 # Output: 20.50000
+
 from typing import List
 from itertools import accumulate
 
