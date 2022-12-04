@@ -1,26 +1,51 @@
-# 1769. Minimum Number of Operations to Move All Balls to Each Box
+"""
+@Author      :   Discount 
+@Time        :   04/12/2022 11:28:37
+@Description :   
+"""
+
+# 1774. Closest Dessert Cost
 # 中等
 
 
-# You have n boxes. You are given a binary string boxes of length n, where boxes[i] is '0' if the ith box is empty, and '1' if it contains one ball.
+# You would like to make dessert and are preparing to buy the ingredients. You have n ice cream base flavors and m types of toppings to choose from. You must follow these rules when making your dessert:
 
-# In one operation, you can move one ball from a box to an adjacent box. Box i is adjacent to box j if abs(i - j) == 1. Note that after doing so, there may be more than one ball in some boxes.
+# There must be exactly one ice cream base.
+# You can add one or more types of topping or have no toppings at all.
+# There are at most two of each type of topping.
+# You are given three inputs:
 
-# Return an array answer of size n, where answer[i] is the minimum number of operations needed to move all the balls to the ith box.
+# baseCosts, an integer array of length n, where each baseCosts[i] represents the price of the ith ice cream base flavor.
+# toppingCosts, an integer array of length m, where each toppingCosts[i] is the price of one of the ith topping.
+# target, an integer representing your target price for dessert.
+# You want to make a dessert with a total cost as close to target as possible.
 
-# Each answer[i] is calculated considering the initial state of the boxes. 
+# Return the closest possible cost of the dessert to target. If there are multiple, return the lower one.
+
 
 # Example 1:
 
-# Input: boxes = "110"
-# Output: [1,1,3]
-# Explanation: The answer for each box is as follows:
-# 1) First box: you will have to move one ball from the second box to the first box in one operation.
-# 2) Second box: you will have to move one ball from the first box to the second box in one operation.
-# 3) Third box: you will have to move one ball from the first box to the third box in two operations, and move one ball from the second box to the third box in one operation.
-
+# Input: baseCosts = [1, 7], toppingCosts = [3, 4], target = 10
+# Output: 10
+# Explanation: Consider the following combination(all 0-indexed):
+# - Choose base 1: cost 7
+# - Take 1 of topping 0: cost 1 x 3 = 3
+# - Take 0 of topping 1: cost 0 x 4 = 0
+# Total: 7 + 3 + 0 = 10.
 # Example 2:
 
-# Input: boxes = "001011"
-# Output: [11,8,5,4,3,4]
+# Input: baseCosts = [2, 3], toppingCosts = [4, 5, 100], target = 18
+# Output: 17
+# Explanation: Consider the following combination(all 0-indexed):
+# - Choose base 1: cost 3
+# - Take 1 of topping 0: cost 1 x 4 = 4
+# - Take 2 of topping 1: cost 2 x 5 = 10
+# - Take 0 of topping 2: cost 0 x 100 = 0
+# Total: 3 + 4 + 10 + 0 = 17. You cannot make a dessert with a total cost of 18.
+
+# Example 3:
+
+# Input: baseCosts = [3, 10], toppingCosts = [2, 5], target = 9
+# Output: 8
+# Explanation: It is possible to make desserts with cost 8 and 10. Return 8 as it is the lower cost.
 
