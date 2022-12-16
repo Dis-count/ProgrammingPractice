@@ -42,3 +42,16 @@
 # Input: s = "zbax", k = 2
 # Output: 8
 
+# 模拟
+
+class Solution:
+    def getLucky(self, s: str, k: int) -> int:
+        digits = "".join(str(ord(ch) - ord("a") + 1) for ch in s)
+
+        for i in range(k):
+            if len(digits) == 1:
+                break
+            total = sum(int(ch) for ch in digits)
+            digits = str(total)
+        
+        return int(digits)
