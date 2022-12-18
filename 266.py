@@ -18,8 +18,6 @@
 # Transform #2: 17 ➝ 1 + 7 ➝ 8
 # Return the resulting integer after performing the operations described above.
 
- 
-
 # Example 1:
 
 # Input: s = "iiii", k = 1
@@ -28,6 +26,7 @@
 # - Convert: "iiii" ➝ "(9)(9)(9)(9)" ➝ "9999" ➝ 9999
 # - Transform #1: 9999 ➝ 9 + 9 + 9 + 9 ➝ 36
 # Thus the resulting integer is 36.
+
 # Example 2:
 
 # Input: s = "leetcode", k = 2
@@ -37,6 +36,7 @@
 # - Transform #1: 12552031545 ➝ 1 + 2 + 5 + 5 + 2 + 0 + 3 + 1 + 5 + 4 + 5 ➝ 33
 # - Transform #2: 33 ➝ 3 + 3 ➝ 6
 # Thus the resulting integer is 6.
+
 # Example 3:
 
 # Input: s = "zbax", k = 2

@@ -17,3 +17,18 @@
 
 # Input: nums = [1,-10,9,1], limit = 100, goal = 0
 # Output: 1
+
+from typing import List
+
+nums = [1,-1,1]
+limit = 3
+goal = -4
+
+class Solution:
+    def minElements(self, nums: List[int], limit: int, goal: int) -> int:
+        return (abs(sum(nums) - goal)-1)// limit +1
+
+test = Solution()
+
+test.minElements(nums, limit, goal)
+
