@@ -18,3 +18,31 @@
 # Input: nums = [3, 2, 20, 1, 1, 3], x = 10
 # Output: 5
 # Explanation: The optimal solution is to remove the last three elements and the first two elements(5 operations in total) to reduce x to zero.
+
+# 滑动窗口
+from typing import List
+
+class Solution:
+    def minOperations(self, nums: List[int], x: int) -> int:
+        n = len(nums)
+        total = sum(nums)
+
+        if total < x:
+            return -1
+        
+        right = 0
+        lsum, rsum = 0, total
+        ans = n + 1
+        for left in range(-1, n - 1):
+            if left != -1:
+                lsum += nums[left]
+            while right < n and lsum + rsum > x:
+                rsum -= nums[right]
+                right += 1
+            if lsum + rsum == x:
+                ans = min(ans, (left + 1) + (n - right))
+        
+        return -1 if ans > n else ans
+
+# 时间复杂度：O(n)，其中 n 是数组 nums 的长度。left 和 right 均最多遍历整个数组一次。
+# 空间复杂度：O(1)。
