@@ -39,5 +39,3 @@ nums = [13, 10, 35, 24, 76]
 
 test =Solution()
 test.countNicePairs(nums)
-
-# \geometry{a4paper,left=1in,right=1in,top =1in, bottom = 1in}
