@@ -68,3 +68,6 @@ class Solution0:
             while st and s[i] > s[st[-1]]:
                 ans = max(ans, i - st.pop())  # [st[-1],i) 可能是最长子数组
         return ans
+
+#  注意如果此题用滑动窗口则是双指针 复杂度：n^2
+#  当 不能通过一些条件判断怎么移动这个窗口 时不能用滑动窗口
