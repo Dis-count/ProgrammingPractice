@@ -10,4 +10,3 @@
 # Example 2:
 # Input: grid = [[1,1,0,0]]
 # Output: 1
- 
