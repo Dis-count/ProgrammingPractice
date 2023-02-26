@@ -23,7 +23,7 @@
 # Output: 0
 # Explanation: Each element in nums is already 0 so no operations are needed.
 
-
+# 直接计算
 from typing import List
 
 class Solution:
